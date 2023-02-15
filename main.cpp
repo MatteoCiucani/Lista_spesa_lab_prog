@@ -32,6 +32,8 @@ int main() {
     // rimozione di un elemento dalla lista
     list->removeItem(1);
 
+
+
     // creazione di un'altra lista
     Listonic* list2 = new Listonic("Latticini");
 
@@ -54,7 +56,7 @@ int main() {
     list->addItem("arancia", 2, "Frutta");
 
 
-    list2->addItem("mozzarella", 3, "formaggi");
+    list2->addItem("mozzarella", 3, "latticini");
 
     return 0;
 }
