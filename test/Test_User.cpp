@@ -23,7 +23,7 @@ TEST_F(Test_User, TestGetUsername) {
 
 TEST_F(Test_User, TestAddList) {
     Listonic* list = new Listonic("Mangiare");
-    Listonic* list2 = new Listonic("Farmacia");
+    Listonic* list2 = new Listonic("Latticini");
     user->addList(list);
     user->addList(list2);
     EXPECT_EQ(2, user->getNumLists());
