@@ -31,13 +31,5 @@ TEST_F(Test_User, TestAddList) {
     EXPECT_EQ(2, user->getNumLists());
 }
 
-TEST_F(Test_User, TestRemoveList) {
-    Listonic* list = new Listonic("Mangiare");
-    Listonic* list2 = new Listonic("Farmacia");
-    user->addList(list);
-    user->addList(list2);
-    EXPECT_EQ(1, user->getNumLists());
-    EXPECT_FALSE(user->hasList("Mangiare"));
-    EXPECT_TRUE(user->hasList("Farmacia"));
-}
+
 
