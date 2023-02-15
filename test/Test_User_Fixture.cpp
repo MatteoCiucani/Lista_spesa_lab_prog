@@ -10,10 +10,6 @@ protected:
         user = new User("Matteo", "MatteCiuc");
     }
 
-    void TearDown() override {
-        delete user;
-    }
-
     User* user;
 };
 
