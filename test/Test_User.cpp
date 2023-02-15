@@ -18,7 +18,7 @@ protected:
 };
 
 TEST_F(Test_User, TestGetUsername) {
-    EXPECT_EQ("Alice", user->getUsername());
+    EXPECT_EQ("MatteCiuc", user->getUsername());
 }
 
 TEST_F(Test_User, TestAddList) {
