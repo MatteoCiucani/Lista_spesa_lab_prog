@@ -11,6 +11,7 @@ class Category {
 public:
     std::string name;
     Category(std::string name) : name(name) {}
+    friend bool operator==(const Category& lhs, const Category& rhs);
 };
 
 

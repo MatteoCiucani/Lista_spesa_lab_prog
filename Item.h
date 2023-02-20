@@ -12,12 +12,8 @@ public:
     std::string name;
     int quantity;
     Category* category;
-    Item(std::string name, int quantity, Category* category) : name(name), quantity(quantity), category(category) {}
-
-
-
-
-
+    Item(std::string &name, int quantity, Category* category) : name(name), quantity(quantity), category(category) {}
+    friend bool operator==(const Item& lhs, const Item& rhs);
 };
 
 
