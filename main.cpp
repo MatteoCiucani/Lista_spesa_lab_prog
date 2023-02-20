@@ -14,7 +14,6 @@ int main() {
     // aggiunta di un elemento alla lista
     list->addItem("Mela", 5, "Frutta");
 
-
     // creazione di  utenti
     User* user = new User("Matteo", "MatteCiuc");
 
@@ -31,8 +30,6 @@ int main() {
 
     // rimozione di un elemento dalla lista
     list->removeItem(1);
-
-
 
     // creazione di un'altra lista
     Listonic* list2 = new Listonic("Latticini");
@@ -54,9 +51,7 @@ int main() {
 
     user2->addList(list);
     list->addItem("arancia", 2, "Frutta");
-
-
-    list2->addItem("mozzarella", 3, "latticini");
+    list->addItem("mozzarella", 3, "latticini");
 
     return 0;
 }

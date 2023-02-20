@@ -17,13 +17,6 @@ int User::getNumLists() const {
     return lists.size();
 }
 
-bool User::hasList(const std::string &listName)const  {
-    for (const auto& list : lists) {
-        if (list->name == listName) {
-            return true;
-        }
-    }
-    return false;
-}
+
 
 

@@ -25,9 +25,6 @@ public:
 
     int getNumLists() const;
 
-    bool hasList(const std::string& listName)const;
-
-
 private:
     std::string name;
     std::vector<Listonic*> lists;

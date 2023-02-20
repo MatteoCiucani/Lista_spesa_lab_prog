@@ -9,24 +9,20 @@ void Listonic::addItem(std::string name, int quantity, std::string categoryName)
     Item* item = new Item(name, quantity, category);
     items.push_back(item);
     notifyObservers();
-
 }
 
 void Listonic::removeItem(int index) {
     items.erase(items.begin() + index);
     notifyObservers();
-
 }
 
 void Listonic::setQuantity(int index, int quantity) {
     items[index]->quantity = quantity;
     notifyObservers();
-
 }
 
 void Listonic::addObserver(ListonicObserver *observer) {
     observers.push_back(observer);
-
 }
 
 void Listonic::removeObserver(ListonicObserver *observer) {

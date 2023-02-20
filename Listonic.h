@@ -16,7 +16,7 @@
 
 class Listonic {
 public:
-    Listonic(std::string name) : name(name) {}
+    explicit Listonic(std::string name) : name(name) {}
 
     void addItem(std::string name, int quantity, std::string categoryName);
 
@@ -40,8 +40,6 @@ public:
     };
 
 
-
-
     std::string name;
 private:
 
@@ -51,7 +49,7 @@ private:
 
 public:
 
-    Category* getCategory(std::string categoryName){
+    Category* getCategory(std::string &categoryName){
         auto it = categories.find(categoryName);
         if (it != categories.end()) {
             return it->second;
@@ -60,8 +58,6 @@ public:
         categories[categoryName] = category;
         return category;
     }
-
-
 };
 
 
