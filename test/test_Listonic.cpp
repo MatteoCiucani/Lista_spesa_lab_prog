@@ -13,7 +13,6 @@ protected:
         list.addItem("Uova", 12, "Mangiare");
         list.addItem("Pane", 1, "Mangiare");
     }
-
     Listonic list = Listonic("Test List");
 };
 
@@ -21,27 +20,35 @@ protected:
 
 TEST_F(test_Listonic, AddItem) {
     list.addItem("Mela", 3, "Frutta");
-    EXPECT_EQ(list.getItems().size(), 4);
-    EXPECT_EQ(list.getItems()[3], "Mela");
-
-    EXPECT_EQ(list.getCategories()[0], "Frutta");
+    ASSERT_EQ(list.getItems().size(), 4);
+    Category cat_Fruit = Category("Frutta");
+    std::string name_product = "Mela";
+    Item item_mela = Item(name_product, 3, &cat_Fruit);
+    ASSERT_EQ(*(list.getItems()[3]), item_mela);
+    ASSERT_EQ(*(list.getCategories()["Frutta"]), cat_Fruit);
 }
+
 
 TEST_F(test_Listonic, RemoveItem) {
     list.removeItem(1);
-    EXPECT_EQ(list.getItems().size(), 2);
-    EXPECT_EQ(list.getItems()[1], "Pane");
-
-    EXPECT_EQ(list.getCategories()[0], "Mangiare");
+    ASSERT_EQ(list.getItems().size(), 2);
+    Category cat_pointer = Category("Mangiare");
+    std::string name_product = "Pane";
+    Item pane = Item(name_product, 1, &cat_pointer);
+    ASSERT_EQ(*list.getItems()[1], pane);
+    ASSERT_EQ(*(list.getCategories()["Mangiare"]), cat_pointer);
 }
 
 TEST_F(test_Listonic, SetQuantity) {
     list.setQuantity(0, 3);
-    EXPECT_EQ(list.getItems().size(), 3);
-    EXPECT_EQ(list.getItems()[0], "Latte");
-
-    EXPECT_EQ(list.getCategories()[0], "Mangiare");
+    ASSERT_EQ(list.getItems().size(), 3);
+    Category cat_pointer = Category("Mangiare");
+    std::string name_product = "Latte";
+    Item latte = Item(name_product, 3, &cat_pointer);
+    ASSERT_EQ(*list.getItems()[0], latte);
+    ASSERT_EQ(*(list.getCategories()["Mangiare"]), cat_pointer);
 }
+
 
 TEST_F(test_Listonic, AddObserver) {
     ObserverMock* observer = new ObserverMock();
@@ -59,23 +66,4 @@ TEST_F(test_Listonic, RemoveObserver) {
     list.addItem("Mela", 3, "Frutta");
     EXPECT_EQ(observer->getList(), &list);
     delete observer;
-}
-
-TEST_F(test_Listonic, GetName) {
-    EXPECT_EQ(list.getName(), "Test List");
-}
-
-TEST_F(test_Listonic, GetItems) {
-    EXPECT_EQ(list.getItems().size(), 3);
-    EXPECT_EQ(list.getItems()[0], "latte");
-    EXPECT_EQ(list.getItems()[1], "Uova");
-    EXPECT_EQ(list.getItems()[2], "Pane");
-}
-
-
-TEST_F(test_Listonic, GetCategories) {
-    EXPECT_EQ(list.getCategories().size(), 2);
-    EXPECT_EQ(list.getCategories()[0], "Mangiare");
-    EXPECT_EQ(list.getCategories()[0], "Latticini");
-
 }

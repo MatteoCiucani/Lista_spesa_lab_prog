@@ -5,15 +5,11 @@
 #include "../User.h"
 #include "ObserverMock.h"
 
-
 class Test_User: public ::testing::Test{
 protected:
     void SetUp() override {
         user = new User("Matteo", "MatteCiuc");
     }
-
-
-
     User* user;
 };
 
