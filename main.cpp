@@ -6,7 +6,7 @@
 #include "Category.h"
 
 int main() {
-    Listonic* list = new Listonic("Mangiare");
+    Listonic* list = new Listonic("Lista1");
 
     // creazione di una categoria
     Category* fruitCategory = new Category("Frutta");
@@ -32,7 +32,7 @@ int main() {
     list->removeItem(1);
 
     // creazione di un'altra lista
-    Listonic* list2 = new Listonic("Latticini");
+    Listonic* list2 = new Listonic("Lista2");
 
     // l'utente aggiunge anche questa lista alla propria collezione
     user1->addList(list2);
@@ -52,6 +52,7 @@ int main() {
     user2->addList(list);
     list->addItem("arancia", 2, "Frutta");
     list->addItem("mozzarella", 3, "latticini");
+    list2->addItem("carta igenica", 3, "sanitari");
 
     return 0;
 }
