@@ -10,6 +10,9 @@ protected:
     void SetUp() override {
         user = new User("Matteo", "MatteCiuc");
     }
+    void TearDown() override {
+        delete user;
+    }
     User* user;
 };
 
