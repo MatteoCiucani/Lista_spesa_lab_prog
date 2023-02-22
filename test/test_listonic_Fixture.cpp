@@ -4,7 +4,7 @@
 #include "gtest/gtest.h"
 #include "../Listonic.h"
 
-class test_Listonic: public ::testing::Test  {
+/*class test_Listonic: public ::testing::Test  {
 protected:
     void SetUp() override {
         list.addItem("Latte", 2, "Mangiare");
@@ -13,6 +13,6 @@ protected:
     }
 
     Listonic list = Listonic("Test List");
-};
+};*/
 
 
