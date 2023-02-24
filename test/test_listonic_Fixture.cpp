@@ -14,10 +14,9 @@ protected:
         list.addItem("Uova", 12, "Mangiare");
         list.addItem("Pane", 1, "Mangiare");
     }
-    void TearDown() override {
-        list = Listonic("Test List");
-    }
-    Listonic list = Listonic("Test List");
+
+
+    Listonic list = Listonic("Test list");
 };
 
 

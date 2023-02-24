@@ -23,6 +23,7 @@ void Listonic::setQuantity(int index, int quantity) {
 
 void Listonic::addObserver(ListonicObserver *observer) {
     observers.push_back(observer);
+
 }
 
 void Listonic::removeObserver(ListonicObserver *observer) {

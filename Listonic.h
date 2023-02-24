@@ -16,7 +16,7 @@
 
 class Listonic {
 public:
-    explicit Listonic(std::string name_Listonic) : name(name_Listonic) {}
+    explicit Listonic(const std::string &name_Listonic) : name(name_Listonic) {}
 
     void addItem(std::string name, int quantity, std::string categoryName);
 

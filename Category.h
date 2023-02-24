@@ -10,7 +10,7 @@
 class Category {
 public:
     std::string name;
-    Category(std::string name_category) : name(name_category) {}
+    Category(const std::string &name_category) : name(name_category) {}
     friend bool operator==(const Category& lhs, const Category& rhs);
 };
 

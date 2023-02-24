@@ -12,7 +12,7 @@ public:
     std::string name;
     int quantity;
     Category* category;
-    Item(std::string &name_Item, int quantity, Category* category) : name(name_Item), quantity(quantity), category(category) {}
+    Item(const std::string &name_Item, int quantity, Category* category) : name(name_Item), quantity(quantity), category(category) {}
     friend bool operator==(const Item& lhs, const Item& rhs);
 };
 

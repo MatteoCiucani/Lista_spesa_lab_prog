@@ -10,7 +10,7 @@
 
 class User : public ListonicObserver {
 public:
-    User(std::string name_User, std::string username) : name(name_User), username(username) {}
+    User(const std::string &name_User, const std::string &username) : name(name_User), username(username) {}
 
     void addList(Listonic* list);
 

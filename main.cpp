@@ -6,7 +6,8 @@
 #include "Category.h"
 
 int main() {
-    Listonic* list = new Listonic("Lista1");
+    std::string lista("lista1");
+    Listonic* list = new Listonic(lista);
 
     // creazione di una categoria
     Category* fruitCategory = new Category("Frutta");
@@ -32,7 +33,8 @@ int main() {
     list->removeItem(1);
 
     // creazione di un'altra lista
-    Listonic* list2 = new Listonic("Lista2");
+    std::string lista1("Lista2");
+    Listonic* list2 = new Listonic(lista1);
 
     // l'utente aggiunge anche questa lista alla propria collezione
     user1->addList(list2);
@@ -44,7 +46,8 @@ int main() {
     // rimozione dell'utente dalla prima lista
     list->removeObserver(user);
 
-    Listonic* list3 = new Listonic("utensili");
+    std::string lista3("Lista3");
+    Listonic* list3 = new Listonic(lista3);
 
     // l'utente aggiunge un elemento alla seconda lista
     list2->addItem("latte", 1, "latticini");
